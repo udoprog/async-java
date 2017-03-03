@@ -1,4 +1,4 @@
-# TinyAsync
+# Async
 
 [![Build Status][build-badge]][build]
 [![Coverage Status][coveralls-badge]][coveralls]
@@ -16,8 +16,8 @@ abstractions for executing and manipulating computations through a clean API abs
 [build-badge]: https://travis-ci.org/udoprog/async-java.svg?branch=master
 [coveralls]: https://coveralls.io/r/udoprog/async-java?branch=master
 [coveralls-badge]: https://coveralls.io/repos/udoprog/async-java/badge.svg?branch=master
-[maven-central]: http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22eu.toolchain.async2%22
-[maven-central-badge]: https://maven-badges.herokuapp.com/maven-central/eu.toolchain.async2/async-api/badge.svg
+[maven-central]: http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22se.tedro.async2%22
+[maven-central-badge]: https://maven-badges.herokuapp.com/maven-central/se.tedro.async2/async-api/badge.svg
 
 # Why TinyAsync?
 
@@ -35,7 +35,7 @@ framework behavior.
 
 For an overview of the library, check out the [API][api] and the [Usage](#usage) section below.
 
-[api]: /async-api/src/main/java/eu/toolchain/concurrent
+[api]: /async-api/src/main/java/se/tedro/concurrent
 
 # Setup
 
@@ -43,7 +43,7 @@ TinyAsync is available [through maven][maven].
 
 ```xml
 <dependency>
-  <groupId>eu.toolchain.async2</groupId>
+  <groupId>se.tedro.async2</groupId>
   <artifactId>async-api</artifactId>
   <version>${async.version}</version>
 </dependency>
@@ -69,9 +69,9 @@ The builder [has a few options][builder] that you can use to customize behavior.
 
 For a more detailed example, see [Helpers.java][helpers].
 
-[maven]: http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22eu.toolchain.async%2
-[builder]: https://udoprog.github.io/async-java/apidocs/latest/eu/toolchain/concurrent/CoreAsync.Builder.html
-[helpers]: /async-examples/src/main/java/eu/toolchain/examples/helpers/Helpers.java
+[maven]: http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22se.tedro.async%2
+[builder]: https://udoprog.github.io/async-java/apidocs/latest/se/tedro/concurrent/CoreAsync.Builder.html
+[helpers]: /async-examples/src/main/java/se/tedro/examples/helpers/Helpers.java
 
 # API Separation
 
@@ -90,7 +90,7 @@ TinyAsync heavily favor isolated unit tests that mock as much as possible,
 see some of the [core test suite][core-tests] if you want some
 inspiration.
 
-[core-tests]: /async-core/src/test/java/eu/toolchain/concurrent/
+[core-tests]: /async-core/src/test/java/se/tedro/concurrent/
 
 # Usage
 
@@ -107,19 +107,19 @@ You can see how the library is used by looking at the provided examples:
 * [Retry Operations][retry-it] ([API][retry-apidocs])
 * [Managed Resources][managed-it] ([API][managed-apidocs])
 
-[stages-from-scratch]: /async-examples/src/main/java/eu/toolchain/examples/FromScratch.java
-[blocking]: /async-examples/src/main/java/eu/toolchain/examples/Blocking.java
-[immediate-results]: /async-examples/src/main/java/eu/toolchain/examples/ImmediateResults.java
-[something-reckless]: /async-examples/src/main/java/eu/toolchain/examples/SomethingReckless.java
-[listen]: /async-examples/src/main/java/eu/toolchain/examples/Listen.java
-[transform]: /async-examples/src/main/java/eu/toolchain/examples/Transform.java
-[collect]: /async-examples/src/main/java/eu/toolchain/examples/Collect.java
-[stream-collect]: /async-examples/src/main/java/eu/toolchain/examples/StreamCollect.java
-[eventually-collect]: /async-examples/src/main/java/eu/toolchain/examples/EventuallyCollect.java
-[retry-it]: /async-core/src/test/java/eu/toolchain/concurrent/RetryUntilResolvedIT.java
-[retry-apidocs]: https://udoprog.github.io/async-java/apidocs/latest/eu/toolchain/concurrent/Async.html#retryUntilCompleted-java.util.concurrent.Callable-eu.toolchain.concurrent.RetryPolicy-
-[managed-it]: /async-core/src/test/java/eu/toolchain/concurrent/ManagedIT.java
-[managed-apidocs]: https://udoprog.github.io/async-java/apidocs/latest/eu/toolchain/concurrent/Managed.html
+[stages-from-scratch]: /async-examples/src/main/java/se/tedro/examples/FromScratch.java
+[blocking]: /async-examples/src/main/java/se/tedro/examples/Blocking.java
+[immediate-results]: /async-examples/src/main/java/se/tedro/examples/ImmediateResults.java
+[something-reckless]: /async-examples/src/main/java/se/tedro/examples/SomethingReckless.java
+[listen]: /async-examples/src/main/java/se/tedro/examples/Listen.java
+[transform]: /async-examples/src/main/java/se/tedro/examples/Transform.java
+[collect]: /async-examples/src/main/java/se/tedro/examples/Collect.java
+[stream-collect]: /async-examples/src/main/java/se/tedro/examples/StreamCollect.java
+[eventually-collect]: /async-examples/src/main/java/se/tedro/examples/EventuallyCollect.java
+[retry-it]: /async-core/src/test/java/se/tedro/concurrent/RetryUntilResolvedIT.java
+[retry-apidocs]: https://udoprog.github.io/async-java/apidocs/latest/se/tedro/concurrent/Async.html#retryUntilCompleted-java.util.concurrent.Callable-se.tedro.concurrent.RetryPolicy-
+[managed-it]: /async-core/src/test/java/se/tedro/concurrent/ManagedIT.java
+[managed-apidocs]: https://udoprog.github.io/async-java/apidocs/latest/se/tedro/concurrent/Managed.html
 
 ## Other Async Libraries
 

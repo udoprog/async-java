@@ -120,7 +120,7 @@ match the number of available cpus.
 
 ## Tricky Thread Scheduling
 
-Reference: [WhyAsync.java, TrickyThreadScheduling Example](../tiny-async-examples/src/main/java/eu/toolchain/examples/WhyAsync.java)
+Reference: [WhyAsync.java, TrickyThreadScheduling Example](../async-examples/src/main/java/se/tedro/examples/WhyAsync.java)
 
 This example is intended to showcase how two fairly innocuous mistakes; **a)**
 a too small thread pool, and **b)** blocking some of your live threads, can be

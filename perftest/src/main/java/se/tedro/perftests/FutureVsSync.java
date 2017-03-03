@@ -1,4 +1,4 @@
-package eu.toolchain.perftests;
+package se.tedro.perftests;
 
 import com.google.common.base.Stopwatch;
 import java.util.ArrayList;

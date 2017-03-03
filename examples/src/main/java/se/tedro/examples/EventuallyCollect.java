@@ -1,6 +1,6 @@
-package eu.toolchain.examples;
+package se.tedro.examples;
 
-import eu.toolchain.examples.helpers.Helpers;
+import se.tedro.examples.helpers.Helpers;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.Callable;

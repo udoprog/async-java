@@ -1,4 +1,4 @@
-package eu.toolchain.perftests.jmh;
+package se.tedro.perftests.jmh;
 
 import com.google.common.util.concurrent.ListenableFuture;
 import java.util.ArrayList;
@@ -15,7 +15,7 @@ public class CollectMany {
   private static Async async = CoreAsync.builder().build();
 
   @Benchmark
-  public void tiny() throws Exception {
+  public void async() throws Exception {
     final List<Stage<Boolean>> futures = new ArrayList<>();
 
     for (int i = 0; i < SIZE; i++) {

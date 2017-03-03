@@ -4,5 +4,5 @@ How to run:
 
 ```
 #> (cd .. && mvn clean package)
-#> java -cp target/tiny-async-perftest-*.jar eu.toolchain.perftests.AsyncPerformanceTests
+#> java -cp target/async-perftest-*.jar se.tedro.perftests.AsyncPerformanceTests
 ```

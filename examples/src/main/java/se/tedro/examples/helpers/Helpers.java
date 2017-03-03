@@ -1,4 +1,4 @@
-package eu.toolchain.examples.helpers;
+package se.tedro.examples.helpers;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.ForkJoinPool;

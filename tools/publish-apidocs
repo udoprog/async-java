@@ -2,7 +2,7 @@
 set -e
 
 remote=public
-repo=udoprog/tiny-async-java
+repo=udoprog/async-java
 version=$(xmllint --xpath "//*[local-name()='project']/*[local-name()='version']/text()" pom.xml)
 # strip SNAPSHOT
 version=${version%%-*}

@@ -19,7 +19,7 @@ import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
 
 /**
- * Entry point to the tiny async framework.
+ * Entry point to the async framework.
  *
  * <p>Example usage:
  *

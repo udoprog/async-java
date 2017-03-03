@@ -1,6 +1,6 @@
-package eu.toolchain.examples;
+package se.tedro.examples;
 
-import eu.toolchain.examples.helpers.Helpers;
+import se.tedro.examples.helpers.Helpers;
 import java.io.PrintStream;
 import se.tedro.concurrent.Async;
 import se.tedro.concurrent.Completable;

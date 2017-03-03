@@ -1,7 +1,7 @@
-package eu.toolchain.examples;
+package se.tedro.examples;
 
 import com.google.common.base.Stopwatch;
-import eu.toolchain.examples.helpers.ChartUtils;
+import se.tedro.examples.helpers.ChartUtils;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;

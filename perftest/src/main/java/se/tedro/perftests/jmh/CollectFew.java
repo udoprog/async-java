@@ -1,6 +1,5 @@
-package eu.toolchain.perftests.jmh;
+package se.tedro.perftests.jmh;
 
-import com.google.common.base.Function;
 import com.google.common.util.concurrent.ListenableFuture;
 import java.util.ArrayList;
 import java.util.List;
@@ -9,17 +8,17 @@ import se.tedro.concurrent.Async;
 import se.tedro.concurrent.CoreAsync;
 import se.tedro.concurrent.Stage;
 
-public class Immediate {
-  private static final int ITERATIONS = 10000;
+public class CollectFew {
+  private static final int SIZE = 10;
 
   private static Async async = CoreAsync.builder().build();
 
   @Benchmark
-  public void tiny() throws Exception {
+  public void async() throws Exception {
     final List<Stage<Boolean>> futures = new ArrayList<>();
 
-    for (int i = 0; i < ITERATIONS; i++) {
-      futures.add(async.completed(true).thenApply(result -> !result));
+    for (int i = 0; i < SIZE; i++) {
+      futures.add(async.completed(true));
     }
 
     async.collect(futures).join();
@@ -29,15 +28,8 @@ public class Immediate {
   public void guava() throws Exception {
     final List<ListenableFuture<Boolean>> futures = new ArrayList<>();
 
-    for (int i = 0; i < ITERATIONS; i++) {
-      futures.add(com.google.common.util.concurrent.Futures.transform(
-        com.google.common.util.concurrent.Futures.immediateFuture(true),
-        new Function<Boolean, Boolean>() {
-          @Override
-          public Boolean apply(Boolean input) {
-            return !input;
-          }
-        }));
+    for (int i = 0; i < SIZE; i++) {
+      futures.add(com.google.common.util.concurrent.Futures.immediateFuture(true));
     }
 
     com.google.common.util.concurrent.Futures.allAsList(futures).get();

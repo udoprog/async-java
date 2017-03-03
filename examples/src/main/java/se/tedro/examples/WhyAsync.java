@@ -1,4 +1,4 @@
-package eu.toolchain.examples;
+package se.tedro.examples;
 
 import com.google.common.base.Stopwatch;
 import com.google.common.util.concurrent.ThreadFactoryBuilder;

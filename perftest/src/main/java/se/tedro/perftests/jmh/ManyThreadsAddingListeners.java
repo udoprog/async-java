@@ -1,4 +1,4 @@
-package eu.toolchain.perftests.jmh;
+package se.tedro.perftests.jmh;
 
 import com.google.common.util.concurrent.FutureCallback;
 import com.google.common.util.concurrent.ListenableFuture;
@@ -49,7 +49,7 @@ public class ManyThreadsAddingListeners {
   public int callbackCount;
 
   @Benchmark
-  public int tiny(final ThreadPool pool) throws Exception {
+  public int async(final ThreadPool pool) throws Exception {
     final int expectedSum = ((size * (size - 1)) / 2) * callbackCount * THREAD_COUNT;
 
     final AtomicInteger sum = new AtomicInteger();

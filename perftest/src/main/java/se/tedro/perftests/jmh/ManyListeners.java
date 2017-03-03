@@ -1,4 +1,4 @@
-package eu.toolchain.perftests.jmh;
+package se.tedro.perftests.jmh;
 
 import com.google.common.util.concurrent.FutureCallback;
 import com.google.common.util.concurrent.ListenableFuture;
@@ -25,7 +25,7 @@ public class ManyListeners {
   private static int THREAD_COUNT = Runtime.getRuntime().availableProcessors();
 
   @Benchmark
-  public void tiny() throws Exception {
+  public void async() throws Exception {
     final ExecutorService executor = Executors.newFixedThreadPool(THREAD_COUNT);
     final Async async = CoreAsync.builder().executor(executor).build();
 

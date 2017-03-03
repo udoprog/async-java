@@ -1,4 +1,4 @@
-package eu.toolchain.examples.helpers;
+package se.tedro.examples.helpers;
 
 import com.google.common.collect.ImmutableList;
 import java.awt.BasicStroke;
