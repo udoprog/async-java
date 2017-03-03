@@ -1,28 +1,28 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>eu.toolchain.async2</groupId>
-  <artifactId>tiny-async-parent</artifactId>
+  <groupId>se.tedro.async</groupId>
+  <artifactId>async-parent</artifactId>
   <version>1.0.0-SNAPSHOT</version>
   <packaging>pom</packaging>
 
-  <url>https://github.com/udoprog/tiny-async-java</url>
+  <url>https://github.com/udoprog/async-java</url>
 
-  <name>tiny-async-parent</name>
+  <name>${project.artifactId}</name>
 
-  <description>
-    A tiny asynchronous library for Java 8.
-  </description>
+  <description>An idiomatic async library for Java 8</description>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-    <guava.version>18.0</guava.version>
+    <guava.version>19.0</guava.version>
   </properties>
 
   <modules>
-    <module>tiny-async-api</module>
-    <module>tiny-async-core</module>
+    <module>api</module>
+    <module>core</module>
   </modules>
 
   <licenses>
@@ -33,9 +33,9 @@
   </licenses>
 
   <scm>
-    <connection>scm:git:git@github.com:udoprog/tiny-async-java</connection>
-    <developerConnection>scm:git:git@github.com:udoprog/tiny-async-java</developerConnection>
-    <url>https://github.com/udoprog/tiny-async-java</url>
+    <connection>scm:git:git@github.com:udoprog/async-java</connection>
+    <developerConnection>scm:git:git@github.com:udoprog/async-java</developerConnection>
+    <url>https://github.com/udoprog/async-java</url>
     <tag>HEAD</tag>
   </scm>
 
@@ -43,21 +43,21 @@
     <developer>
       <id>udoprog</id>
       <name>John-John Tedro</name>
-      <email>johnjohn.tedro@gmail.com</email>
+      <email>udoprog@tedro.se</email>
     </developer>
   </developers>
 
   <dependencyManagement>
     <dependencies>
       <dependency>
-        <groupId>eu.toolchain.async2</groupId>
-        <artifactId>tiny-async-api</artifactId>
+        <groupId>se.tedro.async</groupId>
+        <artifactId>async-api</artifactId>
         <version>${project.version}</version>
       </dependency>
 
       <dependency>
-        <groupId>eu.toolchain.async2</groupId>
-        <artifactId>tiny-async-core</artifactId>
+        <groupId>se.tedro.async</groupId>
+        <artifactId>async-core</artifactId>
         <version>${project.version}</version>
       </dependency>
 
@@ -116,8 +116,8 @@
       <id>extra</id>
 
       <modules>
-        <module>tiny-async-perftest</module>
-        <module>tiny-async-examples</module>
+        <module>perftest</module>
+        <module>examples</module>
       </modules>
     </profile>
 
@@ -239,12 +239,12 @@
               <aggregate>true</aggregate>
               <instrumentation>
                 <ignores>
-                  <ignore>eu.toolchain.examples.*</ignore>
-                  <ignore>eu.toolchain.perftests.*</ignore>
+                  <ignore>se.tedro.examples.*</ignore>
+                  <ignore>se.tedro.perftests.*</ignore>
                 </ignores>
                 <excludes>
-                  <exclude>eu/toolchain/examples/**/*.class</exclude>
-                  <exclude>eu/toolchain/perftests/**/*.class</exclude>
+                  <exclude>se/tedro/examples/**/*.class</exclude>
+                  <exclude>se/tedro/perftests/**/*.class</exclude>
                 </excludes>
               </instrumentation>
             </configuration>
